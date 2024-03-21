@@ -1,0 +1,103 @@
+*
+{
+    margin:0;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+:root{
+    --black:#121121;
+    --black-dark:#0a0a11;
+    --width-1: 160px;
+    --height-1: 40px;
+    --height-2: 50px;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.shivling{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.shivling_upper{
+    width:var(--width-1);
+    height: 220px;
+    background-color: var(--black);
+    border-radius: 50% 50% 0 0 / 30% 30% 0 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.shivling_upper::before{
+content: " ";
+width: 60px;
+height: 6px;
+background-color: rgb(244, 241, 241);
+position: absolute;
+top:80px;
+border-radius:6px;
+box-shadow: 0 14px white, 0 -14px white;
+}
+.shivling_middle_1{
+    width: 280px;
+    height: 30px;
+    background-color: var(--black-dark);
+    border-radius: 50px;
+    position: relative;
+}
+.shivling_middle_1::before{
+    content: "";
+    position: absolute;
+    right:-100px;
+    width: var(--width-1);
+    height:30px;
+    background-color:var(--black-dark);
+    border-radius: 20px;
+
+}
+.shivling_middle_1::after{
+    content: "";
+    position: absolute;
+    right:-100px;
+    width: 30px;
+    height:50px;
+    background-color:var(--black-dark);
+    border-radius: 20px;
+
+}
+
+ .shivling_middle_2{
+    width: calc(var(--width-1) + 60px);
+    height: var(--height-1);
+    background-color: var(--black-dark);
+    border-radius: 0 0 10px 10px;
+}
+ 
+.shivling_lower_1{
+    width: var(--width-1);
+    height: var(--height-2);
+    background-color: var(--black-dark);
+    clip-path:polygon(0% 0% , 100% 0% , 90% 100% , 10% 100%);
+}
+
+.shivling_lower_2{
+    width:var(--width-1);
+    height:var(--height-2);
+    background-color: var(--black-dark);
+    clip-path:polygon(10% 0% , 90% 0% , 100% 100% , 0%  200%);
+}
+
+.shivling_lower_3{
+    width:calc(var(--width-1) + 60px);
+    height: var(--height-1);
+    background-color: var(--black-dark);
+    border-radius: 6px;
+}  
